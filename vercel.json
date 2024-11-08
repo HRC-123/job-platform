@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/**/*.{js,jsx}",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "public/**",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "api/**/*",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/jobs",
+        "dest": "/api/api-jobs.js"
+      },
+      {
+        "src": "/api/student",
+        "dest": "/api/api-users.js"
+      },
+      {
+        "src": "/api/assignments",
+        "dest": "/api/api-products.js"
+      }
+    ]
+  }
+  
